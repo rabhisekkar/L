@@ -31,15 +31,32 @@ public class diagonalSum {
             System.out.println();
         }
     }
-    //diagonal sum 1
+    //diagonal sum 1 (brute force)
     //tc = O(n^2)
     public static void printDiagonalSum(int matrix [][]){
         int sum=0;
         for(int i=0; i<matrix.length; i++){
             for(int j=0; j<matrix[0].length; j++){
+                //primary if i==j, secondary if i+j==matrix.length-1
                 if(i==j || i+j==matrix.length-1){
                     sum+=matrix[i][j];
                 }
+            }
+        }
+        System.out.println("diagonal sum = " + sum);
+    }
+    //diagonal sum 2 (optimized)
+    //tc = O(n)
+    public static void printDiagonalSum1(int matrix [][]){
+        int sum=0;
+        for(int i=0; i<matrix.length; i++){
+            //primary diagonal
+            sum += matrix[i][i];
+            
+            //secondary diagonal
+            //contition to prevent adding the center element twice for odd matrix
+            if(i!=matrix.length-1-i){
+                sum += matrix[i][matrix.length-1-i];
             }
         }
         System.out.println("diagonal sum = " + sum);
@@ -52,11 +69,13 @@ public class diagonalSum {
                           {13, 14, 15, 16}};
         printArray(matrix);
         printDiagonalSum(matrix);
+        printDiagonalSum1(matrix);
         int matrix1[][] = {{1, 2, 3},
                            {4, 5, 6},
                            {7, 8, 9}};
         printArray(matrix1);
         printDiagonalSum(matrix1);
+        printDiagonalSum1(matrix1);
     }
 }
 
@@ -67,9 +86,11 @@ public class diagonalSum {
 // 9 10 11 12
 // 13 14 15 16
 // diagonal sum = 68
+// diagonal sum = 68
 
 // 2d array:
 // 1 2 3
 // 4 5 6
 // 7 8 9
+// diagonal sum = 25
 // diagonal sum = 25
