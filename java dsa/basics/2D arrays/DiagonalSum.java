@@ -18,7 +18,7 @@
 // 7 8 9
 // diagonal sum = 1+5(add 5 once)+9+3+7 = 25
 
-public class diagonalSum {
+public class DiagonalSum {
     //printing array
     public static void printArray(int matrix[][]){
         int n=matrix.length, m=matrix[0].length;
