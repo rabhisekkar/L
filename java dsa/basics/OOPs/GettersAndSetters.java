@@ -1,6 +1,5 @@
 /*  author: @rabhisekkar
     description: demonstrate getters and setters
-    sn: 21
 */
 
 public class GettersAndSetters {
