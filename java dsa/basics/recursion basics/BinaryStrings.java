@@ -29,3 +29,10 @@ public class BinaryStrings {
         printBinStrings(n, 0, "");
     }
 }
+
+// output
+// 000
+// 001
+// 010
+// 100
+// 101
