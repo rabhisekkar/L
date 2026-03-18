@@ -1,6 +1,19 @@
 /*  author: @rabhisekkar
     description: print binary strings of length n without consecutive 1s
 
+    ex: n = 3
+    valid strings:
+    000
+    001
+    010
+    100
+    101
+
+    invalid strings: (consecutive 1s)
+    011  (two 1s together)
+    110
+    111
+
     TC = O(2^n)
     SC = O(n)
 */
