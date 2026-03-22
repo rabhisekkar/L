@@ -1,6 +1,12 @@
 /*  author: @rabhisekkar
     description: search in rotated sorted array using modified binary search
 
+    sorted, rotated array with distinct elements (ascending order).
+    it is rotated at some pivot. Find the index of given target element.
+
+    ex: arr = {4, 5, 6, 7, 0, 1, 2}, target = 0
+    output: 4
+
     TC = O(log n)
     SC = O(log n)   // recursion stack
 */
